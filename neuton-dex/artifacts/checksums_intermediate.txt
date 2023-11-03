@@ -1,0 +1,1 @@
+7767b718312436033aaeb619c156180a910450ff6478c5bbc87670556b2d3959  ./target/wasm32-unknown-unknown/release/neuton_dex.wasm

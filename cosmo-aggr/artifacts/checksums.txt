@@ -1,0 +1,1 @@
+23bc7bacd66e08e119ea562a44a37e5ec1793028afd89fc1910b23c251ad62ce  cosmo_aggr.wasm

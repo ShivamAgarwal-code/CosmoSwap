@@ -1,0 +1,60 @@
+# The global section has parameters that apply globally to the relayer operation.
+[global]
+
+# Specify the verbosity for the relayer logging output. Default: 'info'
+# Valid options are 'error', 'warn', 'info', 'debug', 'trace'.
+log_level = 'info'
+
+[[chains]]
+id = 'injective-888'
+rpc_addr = 'https://k8s.testnet.tm.injective.network:443'
+grpc_addr = 'https://k8s.testnet.chain.grpc.injective.network:443'
+websocket_addr = 'wss://k8s.testnet.tm.injective.network/websocket'
+rpc_timeout = '10s'
+account_prefix = 'inj'
+key_name = 'inj'
+address_type = { derivation = 'ethermint', proto_type = { pk_type = '/injective.crypto.v1beta1.ethsecp256k1.PubKey' } }
+store_prefix = 'ibc'
+default_gas = 5000000
+max_gas = 15000000
+gas_price = { price =500000000, denom = 'inj' }
+# gas_multiplier = 1.1
+max_msg_num = 20
+max_tx_size = 209715
+clock_drift = '20s'
+max_block_time = '10s'
+trusting_period = '10days'
+memo_prefix = 'neutron Docs Rocks'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+  ['transfer', 'channel-60'], # cosmoshub-4
+]
+
+[[chains]]
+id = 'osmo-test-5'
+rpc_addr = 'https://rpc.osmotest5.osmosis.zone:443'
+grpc_addr = 'https://grpc.osmotest5.osmosis.zone:443'
+websocket_addr = 'wss://rpc.osmotest5.osmosis.zone/websocket'
+rpc_timeout = '10s'
+account_prefix = 'osmo'
+key_name = 'osmosis'
+address_type = { derivation = 'cosmos' }
+store_prefix = 'ibc'
+default_gas = 5000000
+max_gas = 15000000
+gas_price = { price = 0.0026, denom = 'uosmo' }
+# gas_multiplier = 1.1
+max_msg_num = 20
+max_tx_size = 209715
+clock_drift = '20s'
+max_block_time = '10s'
+trusting_period = '1hr'
+memo_prefix = 'Osmosis Docs Rocks'
+trust_threshold = { numerator = '1', denominator = '3' }
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['transfer', 'channel-28'], # cosmoshub-4
+]

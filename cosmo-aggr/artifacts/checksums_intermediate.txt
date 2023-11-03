@@ -1,0 +1,1 @@
+9b64ab7a29cdd63e5852ebb318ba0a555b6b08107fdb5ee8fd76baaf796f7e9a  ./target/wasm32-unknown-unknown/release/cosmo_aggr.wasm
