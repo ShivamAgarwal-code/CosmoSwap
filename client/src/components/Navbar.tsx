@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className={classes.flexContainer}>
           <Link style={{ display: "flex", alignItems: "center" }} to="/">
             <img src="/img/logo.png" alt="logo" className={classes.logo} />
-            <h1 className={classes.title}>InterSwapX</h1>
+            <h1 className={classes.title}>CosmoSwap</h1>
           </Link>
 
           <div className={classes.rightSec}>
